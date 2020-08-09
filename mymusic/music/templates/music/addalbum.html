@@ -1,0 +1,42 @@
+{% extends 'music/master1.html' %}
+{% block title %}
+Update Album
+{% endblock %}
+
+{% block body %}
+    <style>
+    table{
+        background-image:url("../../static/music/musiclog.jpg");
+        font-family: "cursive";
+        font-style: oblique;
+        border-radius: 15px;
+        
+    }    
+          
+    </style>
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <h1 style="text-align: center;text-decoration: underline"><i> Album Details </i></h1>
+        <br>
+    {% csrf_token %}
+        <div class="scolor">
+            <table class="table">
+                {% for i in form %}
+                    <tr>
+                    <td><h3>{{ i.label_tag }}</h3></td>
+                    <td>{{ i }}</td>
+                    <td>{{ i.help_text }}</td>
+                    <td>{{ i.errors }}</td>
+                    </tr>
+
+                {% endfor %}
+            </table>
+
+        </div>
+
+        <button class="btn btn-warning" type="submit" value="Register" style="margin-left: 100px; margin-top: 10px; padding: 10px 15px 10px 15px; color: black"> <b>UPDATE</b></button>
+
+
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'music/master.html' %}
+{% block title %}
+Signup Page
+{% endblock %}
+
+{% block body %}
+<form method="post" enctype="multipart/form-data" style="text-align: center">
+    <h1 style="color: black"><u><i>Registration Form</i></u></h1>
+{% csrf_token %}
+    <div class="table-responsive" style="color: white">
+       <!-- <table class="table">
+
+            {% for i in form %}
+                <tr>
+                <td><h3>{{ i.label_tag }}</h3></td>
+                <td>{{ i }}</td>
+                <td>{{ i.help_text }}</td>
+                <td>{{ i.errors }}</td>
+                </tr>
+
+            {% endfor %}
+
+        </table>-->
+        {% for i in form %}
+
+        <label><h3 style="color: white">{{ i.label_tag }}</h3></label>
+        <label  style="color: black">{{ i }}</label><br>
+        <label  style="color: black">{{ i.help_text }}</label><br>
+        <label  style="color: black">{{ i.errors }}</label><br>
+
+         {% endfor %}
+
+    </div>
+
+
+
+
+
+ <button class="btn btn-warning" type="submit" value="Register" >Register</button>
+
+    </form>
+{% endblock %}

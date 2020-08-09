@@ -1,0 +1,20 @@
+{% extends 'music/master1.html' %}
+{% block title %}
+Delete page
+{% endblock %}
+
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<img src="{{ object.image.url }}" height="200px" width="200px" style="margin-left: 150px">
+<div class="container">
+    <h2 style="margin-left: 250px; margin-top: -150px">{{ object.title }}</h2>
+
+    <h3 style="margin-left: 250px">Proceed to Delete</h3>
+    <input type="submit" value="Yes" class="btn btn-success" style="margin-left: 290px;">
+    <a href="{% url 'music:index' %}" class="btn btn-danger" style="margin-left: 20px">No</a>
+   <!-- <button type="submit" value="yes" class="btn btn-primary" style="margin-left: 290px;">Yes</button>
+    <button class="btn btn-danger" style="margin-left: 20px">No</button>-->
+</div>
+</form>
+{% endblock %}

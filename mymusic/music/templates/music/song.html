@@ -1,0 +1,67 @@
+{% extends 'music/master1.html' %}
+
+
+{% block title %}
+{{ val.title }}
+{% endblock %}
+
+{% block body %}
+
+<div class="media">
+  <div class="media-left media-middle">
+    <img class="media-object" height="200px" width="200px" style="margin-left: 20px" src="{{ val.image.url }}" alt="...">
+          {% if user.is_authenticated %}
+    <a href="{% url 'music:addsong' val.id %}" class="btn btn-primary" role="button" style="margin: 20px 10px 10px 60px">Add Song</a><!--   MARGIN : TOP RIGHT BOTTOM LEFT-->
+
+      {% endif %}
+  </div>
+  <div class="media-body">
+  {% if val %}
+
+      <table class="table mt-3">
+          <tr style="color: black; font-weight: bold">
+              <td>Song Title</td>
+              <td>Artist</td>
+              <td>Genre</td>
+              <td>Logo</td>
+              <td>Action</td>
+              {% if user.is_authenticated %}
+                <td>Update</td>
+                <td>Delete</td>
+               {% endif %}
+
+          </tr>
+{% for i in val.song_set.all %}
+            <tr style="color: black; font-weight: bold">
+                <td>{{ i.title }}</td>
+                <td>{{ i.artist }}</td>
+                <td>{{ i.genre }}</td>
+                <td><img src="{{ i.image.url }}" height="50px" width="100px"></td>
+                <td><audio src="{{ i.sfile.url }}" controls="controls"></audio></td>
+            {% if user.is_authenticated %}
+                <td><a href="{% url 'music:updatesong' i.id %}" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-edit"></span></a></td>
+                <td><a href="{% url 'music:deletesong' i.id %}" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-trash"></span></a></td>
+
+
+            {% endif %}
+
+            </tr>
+    {% endfor %}
+
+
+      </table>
+  {% else %}
+  <h1>No Songs To Display!!!</h1>
+
+  {% endif %}
+
+
+
+
+  </div>
+</div>
+
+
+
+
+{% endblock %}

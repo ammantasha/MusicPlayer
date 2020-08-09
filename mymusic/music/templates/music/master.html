@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style type="text/css">
+    #item {
+        background-color: orange;
+        color: black;
+    }
+
+    body{
+        padding-top: 100px;
+         background-image: url("../../static/music/musiclog.jpg");
+    }
+
+
+</style>
+{% load static %}
+<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}
+
+    {% endblock %}</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header" id="item">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only" id="item">Toggle navigation</span>
+      <span class="icon-bar" id="item"></span>
+      <span class="icon-bar" id="item"></span>
+      <span class="icon-bar" id="item"></span>
+    </button>
+    <a class="navbar-brand" href="{% url 'music:index' %}"><span class="glyphicon glyphicon-music" style="color: green"> MusicPlay</span></a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="item">
+    <ul class="nav navbar-nav">
+      <!--
+      <li ><a href="{% url 'music:index' %}" id="item">Home</a></li>
+      <li><a href="{% url 'music:index' %}" id="item">Album</a></li>
+      -->
+
+      <li ><a href="{% url 'music:index' %}"><span class="glyphicon glyphicon-home" aria-hidden="true" id="item"> Home</span></a></li>
+
+    </ul>
+    <form class="navbar-form navbar-left" action="/search" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <ul class="nav navbar-nav navbar-right"  style="margin-right: 50px">
+      <li><a href="{% url 'music:signup' %}" id="item"><span class="glyphicon glyphicon-log-in"> Signup </span></a></li>
+      <li><a href="{% url 'music:login' %}" id="item"><span class="glyphicon glyphicon-user"> Login</span></a></li>
+
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+{% block body %}
+
+{% endblock %}
+
+
+
+
+</body>
+</html>
