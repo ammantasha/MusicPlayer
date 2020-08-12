@@ -5,4 +5,4 @@ Welcome to my Music Player Project. I had made this Project using Python and Dja
 In this project, I collected different music songs and try to implement it as a music 
 Player.
 
-## Technology Used: 
+## Technology Used: *HTML, CSS, Python, Django*
