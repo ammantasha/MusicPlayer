@@ -12,6 +12,4 @@ Player.
 
 *I had decided to make this project because many concepts got covered in this project.*
 
-## If you like my work, please give a ⭐ to this 
-    Repository and if you want this type of projects, you can follow 
-    *ammantasha*. Thanks for giving me your time.
+## If you like my work, please give a ⭐ to this Repository and if you want this type of projects, you can follow *ammantasha*. Thanks for giving me your time.
