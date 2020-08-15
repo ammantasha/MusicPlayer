@@ -1,9 +1,9 @@
 # MusicPlayer
 
 
-Welcome to my Music Player Project. I had made this project using Python and Django.
+*Welcome to my Music Player Project. I had made this project using Python and Django.
 In this project, I collected different songs and try to implement it as a music 
-Player.
+Player*.
 
 ## Technology Used: 
 *HTML, CSS, Python, Django*
