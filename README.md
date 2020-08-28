@@ -10,4 +10,4 @@
 
 *This project covers almost concept of Django which I had learnt during my training days.*
 
-## If you like my work, please give a ⭐ to this Repository and if you want this type of projects, you can follow *ammantasha*. Thanks for visiting😊.
+## If you like my work, please give a ⭐ to this Repository and if you want this type of projects, you can follow *ammantasha*<a href="https://github.com/ammantasha"></a>. Thanks for visiting😊.
