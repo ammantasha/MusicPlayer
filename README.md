@@ -1,7 +1,7 @@
 # MusicPlayer
 
 
-*Welcome to my Music Player Project. I had made this project using Python and Django. In this project, I collected different songs and try to implement it as a Music Album*.
+*Welcome to my Music Player Project. I had made this project using Python and Django. In this project, I collected different songs and try to implement it as a Music Album. In this Music Player, you can listen to the song, rate the album even if you are not registered. To enjoy more features of the Player, you have to register yourself. After successful registration, you can listen to the song, rate the album. In addition, you can also add the song, delete the song even you can create your album too.*
 
 ## Technology Used: 
 *HTML, CSS, Python, Django*
